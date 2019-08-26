@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <app-stock v-for="stock in stocks" :stock="stock"></app-stock>
+  <div class="row">
+    <app-stock v-for="(stock,index) in stocks" :stock="stock" :key="index"></app-stock>
   </div>
 </template>
 
 <script>
 import Stock from './Stock.vue';
+
 
 export default {
   components: {
@@ -13,8 +14,8 @@ export default {
   },
   computed: {
     stocks() {
-      let result = this.$store.getters.stocks;
-      console.log(result);
+      return this.$store.getters.stocks;
+
     }
   }
 }

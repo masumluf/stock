@@ -6,17 +6,17 @@ const state = {
 
 const mutations = {
   'SET_STOCKS'(state, stocks) {
-    this.main_stocks = stocks
-    console.log(this.main_stocks);
+    state.main_stocks = stocks
+    //console.log(this.main_stocks);
   },
 }
 
 
 const getters = {
   stocks: (state) => {
-    console.log(state.main_stocks);
     return state.main_stocks;
-  }
+  },
+
 }
 
 
